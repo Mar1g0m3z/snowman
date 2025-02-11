@@ -50,7 +50,7 @@ def snowman(word=None):
             print("Congratulations, you win!")
             return
 
-    print("Sorry, you lose!")  # Keep this
+    print("Sorry, you lose!")
 
     print(f"The word was {word}")
 
