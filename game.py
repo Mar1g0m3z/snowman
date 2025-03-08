@@ -1,4 +1,4 @@
-import random
+
 from wonderwords import RandomWord
 SNOWMAN_MIN_WORD_LENGTH = 5
 SNOWMAN_MAX_WORD_LENGTH = 8
@@ -15,20 +15,16 @@ SNOWMAN_GRAPHIC = [
 ]
 
 
-def snowman(word=None):
-    """
-    Runs the Snowman game.
-    The player must guess letters in a hidden word.
-    They win by guessing the word before exceeding max wrong guesses.
-    """
-    if word is None:
-        random_word_generator = RandomWord()
-        word = random_word_generator.word(
-            word_min_length=SNOWMAN_MIN_WORD_LENGTH,
-            word_max_length=SNOWMAN_MAX_WORD_LENGTH
-        )
+def generate_random_word():
 
-    # print(f"debug info: {word}")
+    random_word_generator = RandomWord()
+    return random_word_generator.word(
+        word_min_length=SNOWMAN_MIN_WORD_LENGTH,
+        word_max_length=SNOWMAN_MAX_WORD_LENGTH
+    )
+
+
+def snowman(word):
 
     correct_letter_guess_statuses = build_letter_status_dict(word)
     wrong_guesses_list = []
@@ -51,7 +47,6 @@ def snowman(word=None):
             return
 
     print("Sorry, you lose!")
-
     print(f"The word was {word}")
 
 
