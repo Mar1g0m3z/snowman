@@ -1,5 +1,3 @@
-
-from wonderwords import RandomWord
 SNOWMAN_MIN_WORD_LENGTH = 5
 SNOWMAN_MAX_WORD_LENGTH = 8
 SNOWMAN_MAX_WRONG_GUESSES = 7
@@ -13,15 +11,6 @@ SNOWMAN_GRAPHIC = [
     '* (_ : _)  ',
     '-----------'
 ]
-
-
-def generate_random_word():
-
-    random_word_generator = RandomWord()
-    return random_word_generator.word(
-        word_min_length=SNOWMAN_MIN_WORD_LENGTH,
-        word_max_length=SNOWMAN_MAX_WORD_LENGTH
-    )
 
 
 def snowman(word):
