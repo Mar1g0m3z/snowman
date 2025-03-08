@@ -7,8 +7,8 @@ if __name__ == '__main__':
         user_input = input('Please enter p to play or t to test => ')
 
     if user_input == "p":
-        from game import snowman, SNOWMAN_MIN_WORD_LENGTH, SNOWMAN_MAX_WORD_LENGTH
-        from wonderwords import RandomWord
+        from game import snowman
+        # from wonderwords import RandomWord
 
         snowman_word = generate_random_word()
         snowman(snowman_word)
